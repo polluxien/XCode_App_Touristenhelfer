@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class LocationService: NSObject {
+class LocationService: NSObject, ObservableObject {
     
     static let shared = LocationService()
     
@@ -18,6 +18,8 @@ class LocationService: NSObject {
         manager.delegate = self
         return manager
     }()
+    
+    var locationUpdated: ((CLLocationCoordinate2D) -> Void)?
     
     override private init() {
         super.init()
@@ -56,14 +58,15 @@ extension LocationService: CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations location: [CLLocation]) {
-        if let location = location.last?.coordinate {
-          print(location)
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last?.coordinate {
+            locationManager.startUpdatingLocation()
+            locationUpdated?(location)
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
+        print(error.localizedDescription + "hier")
     }
     
 }

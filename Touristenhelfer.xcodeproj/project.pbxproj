@@ -14,6 +14,7 @@
 		55CA5B622B52B91C00879209 /* TouristenhelferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA5B612B52B91C00879209 /* TouristenhelferTests.swift */; };
 		55CA5B6C2B52B91C00879209 /* TouristenhelferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA5B6B2B52B91C00879209 /* TouristenhelferUITests.swift */; };
 		55CA5B6E2B52B91C00879209 /* TouristenhelferUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA5B6D2B52B91C00879209 /* TouristenhelferUITestsLaunchTests.swift */; };
+		55CA5B7E2B53FA3E00879209 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA5B7D2B53FA3E00879209 /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		55CA5B672B52B91C00879209 /* TouristenhelferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouristenhelferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CA5B6B2B52B91C00879209 /* TouristenhelferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristenhelferUITests.swift; sourceTree = "<group>"; };
 		55CA5B6D2B52B91C00879209 /* TouristenhelferUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristenhelferUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		55CA5B7D2B53FA3E00879209 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		55CA5B7F2B5406CD00879209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +97,10 @@
 		55CA5B4F2B52B91900879209 /* Touristenhelfer */ = {
 			isa = PBXGroup;
 			children = (
-				55CA5B502B52B91900879209 /* TouristenhelferApp.swift */,
+				55CA5B7F2B5406CD00879209 /* Info.plist */,
 				55CA5B522B52B91900879209 /* ContentView.swift */,
+				55CA5B502B52B91900879209 /* TouristenhelferApp.swift */,
+				55CA5B7A2B52B98800879209 /* Model */,
 				55CA5B542B52B91C00879209 /* Assets.xcassets */,
 				55CA5B562B52B91C00879209 /* Preview Content */,
 			);
@@ -125,6 +130,14 @@
 				55CA5B6D2B52B91C00879209 /* TouristenhelferUITestsLaunchTests.swift */,
 			);
 			path = TouristenhelferUITests;
+			sourceTree = "<group>";
+		};
+		55CA5B7A2B52B98800879209 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55CA5B7D2B53FA3E00879209 /* LocationService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +272,7 @@
 			files = (
 				55CA5B532B52B91900879209 /* ContentView.swift in Sources */,
 				55CA5B512B52B91900879209 /* TouristenhelferApp.swift in Sources */,
+				55CA5B7E2B53FA3E00879209 /* LocationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,8 +436,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Touristenhelfer/Preview Content\"";
+				DEVELOPMENT_TEAM = ST7MNA93B7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Touristenhelfer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,8 +469,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Touristenhelfer/Preview Content\"";
+				DEVELOPMENT_TEAM = ST7MNA93B7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Touristenhelfer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
